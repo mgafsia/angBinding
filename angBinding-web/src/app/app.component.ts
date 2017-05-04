@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-root',
-  template:   `<div>name : {{name}} <p>
-                    Age : {{age}} <p>
-                    Adresse : {{address.street}} - {{address.city}}
- 
-                </div>`,
-  styleUrls: ['./app.component.css']
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
 })
 export class AppComponent {
   name: string = "mohamed";
