@@ -13,4 +13,10 @@ export class AppComponent {
       street : 'Rue des rues',
       city : '78180 Montigny Le Bretonneux'
   };
+  alignement: string = 'right';
+
+  switchAlignement() {
+    if(this.alignement === "right") this.alignement = "left";
+    else this.alignement = "right";
+  }
 }

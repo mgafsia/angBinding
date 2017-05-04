@@ -1,4 +1,9 @@
-<div>name : {{name}} <p>
+<div>
+  <input (click)="switchAlignement()" type="button" value="alignement">
+</div>
+
+<p></p>
+<div [align]="alignement">name : {{name}} <p>
   Age : {{age}} <p>
   Adresse : {{address.street}} - {{address.city}}
 </div>
