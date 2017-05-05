@@ -1,9 +1,25 @@
 <div>
+  <label for="message">Message to send : </label>
+  <input type="text"
+         id ="message"
+         [(ngModel)]="message"
+         name ="street"
+  >
+</div>
+
+<HR size=2 align=center width="100%">
+
+<div>
   <input (click)="switchAlignement()" type="button" value="alignement">
 </div>
 
 <p></p>
+
 <div [align]="alignement">name : {{name}} <p>
   Age : {{age}} <p>
-  Adresse : {{address.street}} - {{address.city}}
+  Address : {{address.street}} - {{address.city}}
 </div>
+
+<HR size=2 align=center width="100%">
+
+<mga-add [message]="message"></mga-add>
