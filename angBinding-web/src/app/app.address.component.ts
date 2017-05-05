@@ -2,7 +2,7 @@ import {Component, Input} from "@angular/core";
 
 @Component({
   moduleId: module.id,
-  selector: 'mga-add',
+  selector: 'mga-mess',
   template: `<p> Your message is : {{this.message}}`
 })
 export class AppMessageComponent {
