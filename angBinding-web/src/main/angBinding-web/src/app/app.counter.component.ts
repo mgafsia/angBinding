@@ -5,7 +5,7 @@ import {Component} from "@angular/core";
   selector: 'mga-counter',
   templateUrl: 'app.counter.component.html'
 })
-export class AppCounterComponent{
+export class AppCounterComponent {
   counterValue: number = 0;
 
   increment() {
