@@ -5,7 +5,7 @@
 
 # 2- [Property Binding] :
 
-[Property Binding] - example : <div [ngClass] ="…"> or <div bind-ngClass ="…"> 
+[Property Binding] - example : <div [ngClass] ="…"> 
 
 - Property Binding on DOM element :
    

@@ -14,9 +14,14 @@ export class AppComponent {
       city : '78180 Montigny Le Bretonneux'
   };
   alignement: string = 'right';
+  counter: number = 0;
 
   switchAlignement() {
-    if(this.alignement === "right") this.alignement = "left";
+    if(this.alignement === 'right') this.alignement = 'left';
     else this.alignement = "right";
+  }
+  
+  changeCounter(event) {
+    this.counter = event.value;
   }
 }

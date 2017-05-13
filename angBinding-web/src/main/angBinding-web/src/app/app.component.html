@@ -1,12 +1,3 @@
-<div>
-  <label for="message">Message to send : </label>
-  <input type="text"
-         id ="message"
-         [(ngModel)]="message"
-         name ="street"
-  >
-</div>
-
 <HR size=2 align=center width="100%">
 
 <div>
@@ -20,13 +11,33 @@
   Address : {{address.street}} - {{address.city}}
 </div>
 
+<p></p>
+<HR size=2 align=center width="100%">
+
+
+<div>
+  <label for="message">Message to send (Using component) : </label>
+  <input type="text"
+         id ="message"
+         [(ngModel)]="message"
+         name ="street"
+  >
+</div>
+
+<p></p>
 <HR size=2 align=center width="100%">
 
 <mga-mess [message]="message"></mga-mess>
 
-<p></p>
-<HR size=2 align=center width="100%">
-<mga-counter></mga-counter>
+
 
 <p></p>
 <HR size=2 align=center width="100%">
+
+<mga-counter (counterChange)="changeCounter($event);"></mga-counter>
+
+<p></p>
+<HR size=2 align=center width="100%">
+
+In parent component the counter is : {{counter}}
+
