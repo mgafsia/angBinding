@@ -1,6 +1,6 @@
 # angBinding  : Using all the angular Data binding ways.
 
-# 1- {{L'interpolation}}
+# 1- {{interpolation}}
 
 
 # 2- [Property Binding] :
