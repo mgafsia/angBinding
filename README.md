@@ -9,9 +9,9 @@
 
 a- Property Binding on DOM element :
    
-   	By interplation - example : <div align="{{alignement}}"  >
+   	By interpellation - example : <div align="{{alignment}}"  >
    
-   	By Property Binding - example : <div [align]="alignement" >
+   	By Property Binding - example : <div [align]="alignment" >
    
 b- Property Binding on attribute directive  - example :  [ngStyle]="{color:couleur}"
 
