@@ -7,13 +7,13 @@
 
 [Property Binding] - example : <div [ngClass] ="…"> 
 
-- Property Binding on DOM element :
+a- Property Binding on DOM element :
    
    	By interplation - example : <div align="{{alignement}}"  >
    
    	By Property Binding - example : <div [align]="alignement" >
    
-- Property Binding on attribute directive  - example :  [ngStyle]="{color:couleur}"
+b- Property Binding on attribute directive  - example :  [ngStyle]="{color:couleur}"
 
 # 3- Property Binding on component property :
 
@@ -29,9 +29,9 @@ Property Binding on component property. Using :  @Input() - example  <app-comp1 
 
 # 6- [(two-way Data Binding)] :
 
-[(two-way Data Binding)]  "banana in a box" - example : <ma-taille [(taille)] ></ma-taille>
-
-  
+    a- [(two-way Data Binding)]  "banana in a box" - example : <ma-taille [(taille)] ></ma-taille>
+    
+    b- [(ngModel)] : Data Binding 2-way with ngModel (for Input & textarea) - example : <input [(ngModel)]="prenom">
 
 
 

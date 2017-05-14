@@ -15,7 +15,9 @@ export class AppComponent {
   };
   alignment: string = 'right';
   counter: number = 0;
-  parentSize: number = 16;    
+  parentSize: number = 16;
+  person: string ="First name - in Parent component";  
+    
   
   switchAlignment() {
     if(this.alignment === 'right') this.alignment = 'left';
@@ -25,4 +27,8 @@ export class AppComponent {
   changeCounter(event) {
     this.counter = event.value;
   }
+    
+  changePerson() {
+      this.person = "Changed by Parent component"
+  }    
 }
