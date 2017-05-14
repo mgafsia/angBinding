@@ -41,3 +41,25 @@
 
 In parent component the counter is : {{counter}}
 
+<p></p>
+<HR size=2 align=center width="100%">
+The two way binding ... tested by resizing :
+
+Button on child component ...
+
+<p></p>
+<HR size=2 align=center width="100%">
+
+
+<mga-size [(childSize)]="parentSize" ></mga-size> 
+
+<div [style.font-size.px]="parentSize">    
+	Text resized on {{parentSize}}px on parent component ...
+</div>
+
+
+
+
+	
+
+  

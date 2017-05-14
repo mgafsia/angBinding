@@ -15,7 +15,8 @@ export class AppComponent {
   };
   alignment: string = 'right';
   counter: number = 0;
-
+  parentSize: number = 16;    
+  
   switchAlignment() {
     if(this.alignment === 'right') this.alignment = 'left';
     else this.alignment = "right";

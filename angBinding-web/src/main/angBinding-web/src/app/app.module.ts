@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {AppMessageComponent} from "./app.address.component";
 import {AppCounterComponent} from "./app.counter.component";
+import {AppSizeComponent} from "./app.size.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     AppMessageComponent,
-    AppCounterComponent
+    AppCounterComponent,
+    AppSizeComponent
   ],
   imports: [
     BrowserModule,
