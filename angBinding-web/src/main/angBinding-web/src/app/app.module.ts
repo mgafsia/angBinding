@@ -1,24 +1,38 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {BrowserModule} from "@angular/platform-browser";
+import {NgModule} from "@angular/core";
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
 
-import { AppComponent } from './app.component';
-import {AppMessageComponent} from "./app.address.component";
-import {AppCounterComponent} from "./app.counter.component";
-import {AppSizeComponent} from "./app.size.component";
+import {AppComponent} from "./app.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {
+  MdButtonModule,
+  MdCardModule,
+  MdIconModule,
+  MdMenuModule,
+  MdTabsModule,
+  MdToolbarModule
+} from "@angular/material";
+import {BindingModule} from "../binding/binding.module";
+import {MyObservableModule} from "../rx/myoberserbvable.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AppMessageComponent,
-    AppCounterComponent,
-    AppSizeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdMenuModule,
+    MdCardModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdTabsModule,
+    BindingModule,
+    MyObservableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

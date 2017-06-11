@@ -1,73 +1,39 @@
-<HR size=2 align=center width="100%">
-
 <div>
-  <input (click)="switchAlignment()" type="button" value="alignment">
-</div>
+  <md-toolbar color="primary">
+    <span><md-icon>mood</md-icon></span>
 
-<p></p>
+    <span>Angular 4 : Material & binding ways & Rx Observable/Observer</span>
 
-<div [align]="alignment">name : {{name}} <p>
-  Age : {{age}} <p>
-  Address : {{address.street}} - {{address.city}}
-</div>
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Option 1</button>
+    <button md-menu-item>Option 2</button>
+  </md-menu>
 
-<p></p>
-<HR size=2 align=center width="100%">
+  <md-card>
+    <md-tab-group [selectedIndex]="2">
+      <md-tab label="Binding">
+        <cc-bind></cc-bind>
+      </md-tab>
 
-
-<div>
-  <label for="message">Message to send (Using component) : </label>
-  <input type="text"
-         id ="message"
-         [(ngModel)]="message"
-         name ="street"
-  >
-</div>
-
-<p></p>
-<HR size=2 align=center width="100%">
-
-<mga-mess [message]="message"></mga-mess>
+      <md-tab label="Rx">
+        <app-obsval></app-obsval>
+      </md-tab>
+    </md-tab-group>
+  </md-card>
 
 
-
-<p></p>
-<HR size=2 align=center width="100%">
-
-<mga-counter (counterChange)="changeCounter($event);"></mga-counter>
-
-<p></p>
-<HR size=2 align=center width="100%">
-
-In parent component the counter is : {{counter}}
-
-<p></p>
-<HR size=2 align=center width="100%">
-The two way binding ... tested by resizing :
-
-Button on child component ...
-
-<p></p>
-<HR size=2 align=center width="100%">
-
-
-<mga-size [(childSize)]="parentSize" ></mga-size> 
-
-<div [style.font-size.px]="parentSize">    
-	Text resized on {{parentSize}}px on parent component ...
-</div>
-
-<p></p>
-<HR size=2 align=center width="100%">
-Data Binding 2-way with ngModel (for Input & textarea)
-<div>
-  <input [(ngModel)]="person"/>
-</div>
-<div>
-<button (click)="changePerson()">Change Person</button>
+  <span class="done">
+    <button md-fab>
+      <md-icon>check circle</md-icon>
+    </button>
+  </span>
 </div>
 
 
-	
 
-  
+
+

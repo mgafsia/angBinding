@@ -5,6 +5,6 @@ import {Component, Input} from "@angular/core";
   selector: 'mga-mess',
   template: `<p> Your message is : {{this.message}}`
 })
-export class AppMessageComponent {
+export class BindingMessageComponent {
   @Input() message: any;
 }

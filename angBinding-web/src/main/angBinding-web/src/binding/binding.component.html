@@ -1,0 +1,66 @@
+<HR size=2 align=center width="100%">
+<div>
+  <input (click)="switchAlignment()" type="button" value="alignment">
+</div>
+
+<p></p>
+<div [align]="alignment">name : {{name}} <p>
+  Age : {{age}} <p>
+  Address : {{address.street}} - {{address.city}}
+</div>
+
+<p></p>
+<div>
+  <label for="message">Message to send (Using component) : </label>
+  <input type="text"
+         id ="message"
+         [(ngModel)]="message"
+         name ="street"
+  >
+</div>
+
+
+<HR size=2 align=center width="100%">
+
+<p></p>
+<HR size=2 align=center width="100%">
+
+<mga-mess [message]="message"></mga-mess>
+
+
+
+<p></p>
+<HR size=2 align=center width="100%">
+
+<mga-counter (counterChange)="changeCounter($event);"></mga-counter>
+
+<p></p>
+<HR size=2 align=center width="100%">
+
+In parent component the counter is : {{counter}}
+
+<p></p>
+<HR size=2 align=center width="100%">
+The two way binding ... tested by resizing :
+
+Button on child component ...
+
+<p></p>
+<HR size=2 align=center width="100%">
+
+
+<mga-size [(childSize)]="parentSize" ></mga-size>
+
+<div [style.font-size.px]="parentSize">
+  Text resized on {{parentSize}}px on parent component ...
+</div>
+
+<p></p>
+<HR size=2 align=center width="100%">
+Data Binding 2-way with ngModel (for Input & textarea)
+<div>
+  <input [(ngModel)]="person"/>
+</div>
+<div>
+  <button (click)="changePerson()">Change Person</button>
+</div>
