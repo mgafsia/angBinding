@@ -15,6 +15,9 @@ import {
 } from "@angular/material";
 import {BindingModule} from "../binding/binding.module";
 import {MyObservableModule} from "../rx/myoberserbvable.module";
+import {RouterModule} from "@angular/router";
+import {BindingComponent} from "../binding/binding.component";
+import {MyObservableComponent} from "../rx/myobservable.component";
 
 @NgModule({
   declarations: [
@@ -32,9 +35,13 @@ import {MyObservableModule} from "../rx/myoberserbvable.module";
     MdIconModule,
     MdTabsModule,
     BindingModule,
-    MyObservableModule
+    MyObservableModule,
+    RouterModule.forRoot([
+        { path: 'binding', component: BindingComponent},
+        { path: 'rx', component: MyObservableComponent},
+        { path: '', component: BindingComponent},
+     ])
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

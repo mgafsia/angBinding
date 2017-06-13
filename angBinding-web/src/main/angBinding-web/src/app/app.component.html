@@ -1,38 +1,45 @@
 <div>
   <md-toolbar color="primary">
     <span><md-icon>mood</md-icon></span>
-
     <span>Angular 4 : Material & binding ways & Rx Observable/Observer</span>
-
     <button md-icon-button [md-menu-trigger-for]="menu">
       <md-icon>more_vert</md-icon>
     </button>
   </md-toolbar>
   <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item>Option 1</button>
-    <button md-menu-item>Option 2</button>
+    <button md-menu-item
+       a [routerLink]="['/binding']"
+       routerLinkActive #rla="routerLinkActive"
+    >Binding</button>
+    <button md-menu-item
+              a [routerLink]="['/rx']"
+              routerLinkActive #rla="routerLinkActive"
+      >Rx</button>
   </md-menu>
 
-  <md-card>
-    <md-tab-group [selectedIndex]="2">
-      <md-tab label="Binding">
-        <cc-bind></cc-bind>
-      </md-tab>
-
-      <md-tab label="Rx">
-        <app-obsval></app-obsval>
-      </md-tab>
-    </md-tab-group>
-  </md-card>
-
+  <nav md-tab-nav-bar>
+    <a md-tab-link
+       [routerLink]="['/binding']"
+       routerLinkActive #rlab="routerLinkActive"
+       [active]="!rlar.isActive">
+      Binding
+    </a>
+    <a md-tab-link
+       [routerLink]="['/rx']"
+       routerLinkActive #rlar="routerLinkActive"
+       [active]="rlar.isActive">
+       Rx
+    </a>
+  </nav>
 
   <span class="done">
-    <button md-fab>
+    <button md-fab [routerLink]="['/binding']" routerLinkActive #rla="routerLinkActive">
       <md-icon>check circle</md-icon>
     </button>
   </span>
 </div>
 
+<router-outlet></router-outlet>
 
 
 
