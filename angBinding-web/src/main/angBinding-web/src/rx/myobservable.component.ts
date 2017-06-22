@@ -1,7 +1,9 @@
 import {Component} from "@angular/core";
 import {Observable} from "rxjs/Observable";
-import "rxjs/add/observable/from";
-import {MyObservor} from "./myobserver";
+import "rxjs/add/observable/from"
+import "rxjs/add/observable/interval"
+
+
 
 @Component({
   selector: 'app-obsval',
@@ -48,4 +50,12 @@ export class MyObservableComponent {
     );
   }
 
+  createObservableByInterval() {
+    let observor$ = Observable.interval(1000);
+    observor$.subscribe(
+      (val) => console.log(val),
+      (err) => console.error(err),
+      () => console.log('complete !')
+    );
+  }
 }
