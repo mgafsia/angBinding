@@ -51,11 +51,26 @@ export class MyObservableComponent {
   }
 
   createObservableByInterval() {
-    let observor$ = Observable.interval(1000);
-    observor$.subscribe(
+    let observer$ = Observable.interval(1000);
+    observer$.subscribe(
       (val) => console.log(val),
       (err) => console.error(err),
       () => console.log('complete !')
     );
   }
+
+  createObservableFromEvent() {
+    let observer$ = Observable.fromEvent(document, 'click');
+    observer$.subscribe(
+      obs => console.log(obs)
+    );
+  }
+  /*
+  displayTheMousePositionAfterClick() {
+    let observer$ = Observable.fromEvent(document, 'click');
+    let observerPosition$ = observer$.map(evt => ((evnet) evt).clientX);
+    observer$.subscribe(
+        obs => console.log(observer$)
+      );
+    }*/
 }
