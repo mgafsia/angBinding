@@ -11,7 +11,8 @@ import {BindingMessageComponent} from "./binding.message.component";
   declarations: [BindingComponent,
                  BindingSizeComponent,
                  BindingCounterComponent,
-                 BindingMessageComponent],
+                 BindingMessageComponent
+                 ],
   imports: [BrowserModule,
             FormsModule]
 

@@ -4,7 +4,6 @@ import "rxjs/add/observable/from"
 import "rxjs/add/observable/interval"
 
 
-
 @Component({
   selector: 'app-obsval',
   templateUrl: 'myobservable.component.html'
@@ -65,12 +64,13 @@ export class MyObservableComponent {
       obs => console.log(obs)
     );
   }
-  /*
+
   displayTheMousePositionAfterClick() {
-    let observer$ = Observable.fromEvent(document, 'click');
-    let observerPosition$ = observer$.map(evt => ((evnet) evt).clientX);
+    let observer$ = Observable.fromEvent<MouseEvent>(document, 'mousemove');
+    let observerPosition$ = observer$.map(mEvent => ({x: mEvent.clientX, y:mEvent.clientY}));
+
     observer$.subscribe(
         obs => console.log(observer$)
       );
-    }*/
+    }
 }

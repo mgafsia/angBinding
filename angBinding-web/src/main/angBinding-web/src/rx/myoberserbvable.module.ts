@@ -1,10 +1,19 @@
 import {NgModule} from "@angular/core";
 import {MyObservableComponent} from "./myobservable.component";
+import {BrowserModule} from "@angular/platform-browser";
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
+import {MdButtonModule, MdIconModule, MdInputContainer, MdInputModule} from "@angular/material";
 
 @NgModule({
   declarations: [MyObservableComponent],
-  exports: [MyObservableComponent]
-})
+  exports: [MyObservableComponent],
+  imports: [BrowserModule,
+            FormsModule,
+            HttpModule,
+            MdInputModule
+           ]
+  })
 export class MyObservableModule {
 
 }
