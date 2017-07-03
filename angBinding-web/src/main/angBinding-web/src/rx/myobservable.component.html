@@ -1,16 +1,9 @@
 <HR size=2 align=center width="100%">
 <br>
+<label>Please use the console to get the full test output ... </label>
 <br>
-<md-input-container>
-  <label>observable/observer output : (You can use the console to get the output too)</label>
-  <br/>
-  <textarea mdTextarea rows="5" value="{{observerOutput}}"></textarea>
-</md-input-container>
-
-
 
 <HR size=2 align=center width="100%">
-<br>
 <br>
 Create observable and Observer
 <button (click)="createObservableAndObserver()">test</button>
@@ -18,34 +11,45 @@ Create observable and Observer
 <HR size=2 align=center width="100%">
 <br>
 <br>
-Create observable using from() methode (without creating an observer object)
+Create observable using from() method (without creating an observer object)
 <button (click)="createObservableByFrom()">test</button>
 
 <HR size=2 align=center width="100%">
 <br>
 <br>
-Create observable using create() methode - with displaying error message when > 4
+Create observable using create() method - with displaying error message when > 4
 <button (click)="createObservableByCreate()">test</button>
 
 <HR size=2 align=center width="100%">
 <br>
 <br>
-Create observable using map() methode
+Create observable using map() method
 <button (click)="createObservableByMap()">test</button>
 
 
 <HR size=2 align=center width="100%">
 <br>
 <br>
-Create observable using interval() methode
+Create observable using interval() method
 <button (click)="createObservableByInterval()">test</button>
 
 
 <HR size=2 align=center width="100%">
 <br>
 <br>
-Create observable from events like mouse click ... using fromEvent methode()
+Create observable from events like mouse click ... using fromEvent() method
 <button (click)="createObservableFromEvent()">test</button>
 <br>
 Log the mouse position
 <button (click)="displayTheMousePositionAfterClick()">test</button>
+<HR size=2 align=center width="100%">
+<br>
+<br>
+<md-input-container>
+  <label>Some observable/observer output. Please use the console to get the full test output : </label>
+  <br/>
+  <textarea mdInput  rows="5">{{observerOutput}}</textarea>
+</md-input-container>
+<br>
+<button (click)="clearText()">Clear</button>
+

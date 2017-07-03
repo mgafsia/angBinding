@@ -8,7 +8,7 @@ export class MyObserver{
 
   next(val: any) {
     console.log(`In next the entry is : ${val}`);
-    this.myObservableComponent.observerOutput = val + '<br/>' + this.myObservableComponent.observerOutput;
+    this.myObservableComponent.observerOutput = val + '\n' + this.myObservableComponent.observerOutput;
   }
 
   erro(err: any) {
