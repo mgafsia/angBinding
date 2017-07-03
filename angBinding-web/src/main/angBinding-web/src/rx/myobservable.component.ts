@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/observable/from"
 import "rxjs/add/observable/interval"
+import {MyObserver} from "./myobserver";
 
 
 @Component({
@@ -10,11 +11,17 @@ import "rxjs/add/observable/interval"
 })
 export class MyObservableComponent {
   _intStream: [number] = [1, 2, 3, 4, 5];
+  observerOutput: string = "";
+  createObservableAndObserver() {
+    const observable$ = Observable.from(this._intStream);
+    let myObserver = new MyObserver(this);
+    observable$.subscribe(myObserver);
+  }
 
   createObservableByFrom() {
     const observable$ = Observable.from(this._intStream);
     const observor = observable$.subscribe(
-      (val) => console.log(val),
+      (val) => { console.log(val); this.observerOutput = val.toString() },
       (err) => console.error(err),
       () => console.log('complete !')
     );
