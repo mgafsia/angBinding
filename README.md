@@ -1,4 +1,17 @@
-# angBinding  : Using all the angular Data binding ways.
+# angBinding  : To test Angular binding methods, Material for Angular 2+ & RxJS Observable/Observer 
+
+App installed on AWS server instance : www.mgafsia.com
+
+# To install & run :
+  - install node 
+  - install angular CLI
+  - to run :  
+      * cd cd angBinding-web/src/main/angBinding-web/
+      * npm install 
+      * npm start
+
+
+# angBinding  : Part I : Using all the angular Data binding ways.
 
 # 1- {{interpolation}}
 
@@ -33,6 +46,30 @@ Property Binding on component property. Using :  @Input() - example  <app-comp1 
     
     b- [(ngModel)] : Data Binding 2-way with ngModel (for Input & textarea) - example : <input [(ngModel)]="prenom">
 
+# angBinding  : Part II : Using Material for Angular 2+ 
+
+# angBinding  : Part III : Using RxJS Observable/Observer  Methods - Test most over them (Standard ones)
+
+Quick over view : 
+
+    - [ data flow ] = can be converted to [observable]
+    
+    - observable = "push" [data flow] to [observable] via methode [next] of [observable]
+    
+    - observer = "subscribe" to [observable]. The [observable] use [next] methode to [push] data to [observor]. eg : observable.subscribe(observer)
+         = Object which has these three methodes : [next], [error] & complete.
+
+    - opertors =    Observable.from()
+	                Observable.map()
+                    Observable.mapTo()
+                    Observable.interval()
+                    Observable.take()
+                    Observable.fromEvent()
+                    Observable.do()
+                    Observable.filter()
+                    Observable.concat()
+                    Observable.merge()
+                    Observable.from()
 
 
 
