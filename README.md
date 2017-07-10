@@ -1,6 +1,6 @@
 # angBinding  : To test Angular binding methods, Material for Angular 2+ & RxJS Observable/Observer 
 
-App installed on AWS server instance : www.mgafsia.com
+App installed on AWS server instance : http://ec2-54-85-145-180.compute-1.amazonaws.com:4400
 
 # To install & run :
   - install node 
