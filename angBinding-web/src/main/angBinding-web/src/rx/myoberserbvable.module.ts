@@ -3,7 +3,7 @@ import {MyObservableComponent} from "./myobservable.component";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
-import {MdInputModule} from "@angular/material";
+import {MdButtonModule, MdInputModule} from "@angular/material";
 
 @NgModule({
   declarations: [MyObservableComponent],
@@ -11,7 +11,8 @@ import {MdInputModule} from "@angular/material";
   imports: [BrowserModule,
             FormsModule,
             HttpModule,
-            MdInputModule
+            MdInputModule,
+            MdButtonModule
            ]
   })
 export class MyObservableModule {

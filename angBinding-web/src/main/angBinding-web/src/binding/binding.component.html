@@ -50,7 +50,7 @@ Button on child component ...
 
 
 <mga-size [(childSize)]="parentSize" ></mga-size>
-
+<p></p>
 <div [style.font-size.px]="parentSize">
   Text resized on {{parentSize}}px on parent component ...
 </div>
@@ -58,9 +58,12 @@ Button on child component ...
 <p></p>
 <HR size=2 align=center width="100%">
 Data Binding 2-way with ngModel (for Input & textarea)
+<p></p>
 <div>
   <input [(ngModel)]="person"/>
 </div>
+
+<p></p>
 <div>
-  <button (click)="changePerson()">Change Person</button>
+  <button md-raised-button color="primary" (click)="changePerson()">Change Person</button>
 </div>

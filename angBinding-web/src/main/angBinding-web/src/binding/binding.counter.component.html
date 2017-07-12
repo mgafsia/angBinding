@@ -3,19 +3,17 @@
 </div>
 
 <div>
-  <input type="text" placeholder="counter value" disabled="true" [value]="counterValue">
-  <!--<button md-button  class="background-primary-color white-text md-small"-->
-          <!--(click)="decrement()">-</button>-->
-  <!--&lt;!&ndash;<md-icon md-svg-src = '/static/img/ic_plus_one.svg'></md-icon>&ndash;&gt;-->
-  <!--<button md-button class="background-primary-color white-text material-cust-short-button">+</button>-->
-
   <md-card>
-    <button md-fab>
-      <md-icon>cloud</md-icon>
+    <button md-fab (click)="increment()">
+      <md-icon>add</md-icon>
     </button>
-    <button md-fab color="accent">
-      <md-icon>airplane-takeoff</md-icon>
+    <button md-fab color="accent" (click)="decrement()">
+      <md-icon>remove</md-icon>
     </button>
   </md-card>
-
+  <md-card>
+    <md-input-container>
+      <input mdInput placeholder="Counter value" disabled="true" dividerColor="accent" [value]="counterValue">
+    </md-input-container>
+  </md-card>
 </div>
