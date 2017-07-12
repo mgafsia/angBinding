@@ -23,30 +23,3 @@ md-toolbar-row {
   color: white;
 }
 
-.navBardemoBasicUsage md-content .ext-content {
-  padding: 50px;
-  margin: 20px;
-  background-color: #FFF2E0; }
-
-.primary-color {
-  color: #3F51B5!important;
-}
-.accent-color {
-  color: #FF4081!important;
-}
-.background-primary-color {
-  background-color: #3F51B5!important;
-}
-.background-accent-color {
-  background-color: #FF4081!important;
-}
-.white-text {
-  color: #FFF!important;
-}
-
-.material-cust-short-button {
-  width: 1px;
-  height: 1px;
-  padding-top: 1px;
-  min-width: 1%;
-}

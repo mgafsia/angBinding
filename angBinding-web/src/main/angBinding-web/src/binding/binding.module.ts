@@ -6,7 +6,7 @@ import {BindingSizeComponent} from "./binding.size.component";
 import {BindingCounterComponent} from "./binding.counter.component";
 import {BindingMessageComponent} from "./binding.message.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MdIconModule} from "@angular/material";
+import {MdButtonModule, MdCardModule, MdIconModule, MdInputModule} from "@angular/material";
 
 @NgModule({
   exports: [BindingComponent],
@@ -18,7 +18,12 @@ import {MdIconModule} from "@angular/material";
   imports: [BrowserModule,
             BrowserAnimationsModule,
             FormsModule,
-            MdIconModule
+            //--Material Modules
+            MdInputModule,
+            MdIconModule,
+            MdButtonModule,
+            MdCardModule,
+
             ]
 
 })
