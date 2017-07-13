@@ -7,7 +7,7 @@ import {Component} from "@angular/core";
 })
 export class BindingComponent {
   name: string = "mohamed";
-  age:number = 36;
+  age:number = 30;
   address:any = {
     street : 'Rue des rues',
     city : '78180 Montigny Le Bretonneux'

@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {Observable} from "rxjs/Observable";
+import {Observable} from "rxjs/Rx";
 import "rxjs/add/observable/from"
 import "rxjs/add/observable/interval"
 import {MyObserver} from "./myobserver";

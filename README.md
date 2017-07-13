@@ -48,7 +48,7 @@ Property Binding on component property. Using :  @Input() - example  <app-comp1 
 
 # angBinding  : Part II : Using Material for Angular 2+ 
 
-# angBinding  : Part III : Using RxJS Observable/Observer  Methods - Test most over them (Standard ones)
+# angBinding  : Part III : Using RxJS Observable/Observer  Methods 
 
 Quick over view : 
 
