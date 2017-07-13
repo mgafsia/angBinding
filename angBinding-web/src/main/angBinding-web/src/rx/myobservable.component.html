@@ -5,32 +5,32 @@
 
 <HR size=2 align=center width="100%">
 <br>
-Create observable and Observer
+Create observable and Observer from array [1, 2, 3, 4, 5] using form() method and a separate Observer object.
 <button md-raised-button color="primary" (click)="createObservableAndObserver()">test</button>
 
 <HR size=2 align=center width="100%">
 <br>
 <br>
-Create observable using from() method (without creating an observer object)
+Create observable from array [1, 2, 3, 4, 5] using form() method (without creating an observer object)
 <button md-raised-button color="primary" (click)="createObservableByFrom()">test</button>
 
 <HR size=2 align=center width="100%">
 <br>
 <br>
-Create observable using create() method - with displaying error message when > 4
+Create observable from array [1, 2, 3, 4, 5] using create() method - with displaying error message when > 4
 <button md-raised-button color="primary" (click)="createObservableByCreate()">test</button>
 
 <HR size=2 align=center width="100%">
 <br>
 <br>
-Create observable using map() method
+Create observable from array [1, 2, 3, 4, 5] and using mapping the values to *1000 using map() method
 <button md-raised-button color="primary" (click)="createObservableByMap()">test</button>
 
 
 <HR size=2 align=center width="100%">
 <br>
 <br>
-Create observable using interval() method
+Create observable using interval() method (1000 values : interval(1000))
 <button md-raised-button color="primary" (click)="createObservableByInterval()">test</button>
 
 
@@ -45,6 +45,21 @@ Log the mouse position
 <HR size=2 align=center width="100%">
 <br>
 <br>
+
+<HR size=2 align=center width="100%">
+<br>
+<br>
+Create observable by contacting array [1, 2, 3, 4, 5] & array [21, 1, 23, 4, 25] ...  using concat() method
+<button md-raised-button color="primary" (click)="createObservableWithConcat()">test</button>
+<br>
+
+<HR size=2 align=center width="100%">
+<br>
+<br>
+Create observable by merging array [1, 2, 3, 4, 5] & array [21, 1, 23, 4, 25] ...  using concat() method
+<button md-raised-button color="primary" (click)="createObservableWithMerge()">test</button>
+<br>
+
 <md-input-container>
   <label>Some observable/observer output. Please use the console to get the full test output : </label>
   <br/>

@@ -16,5 +16,4 @@ import {MdButtonModule, MdInputModule} from "@angular/material";
            ]
   })
 export class MyObservableModule {
-
 }

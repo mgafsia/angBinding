@@ -11,6 +11,8 @@ import {MyObserver} from "./myobserver";
 })
 export class MyObservableComponent {
   _intStream: [number] = [1, 2, 3, 4, 5];
+  _intStream2: [number] = [21, 1, 23, 4, 25];
+
   observerOutput: string = "";
   createObservableAndObserver() {
     this.observerOutput
@@ -86,6 +88,35 @@ export class MyObservableComponent {
       (val) => { console.log(val); this.observerOutput = this.observerOutput + "\n" + val.toString() }
     );
     }
+
+  createObservableWithConcat() {
+    let observable1: Observable<number> = Observable.from(this._intStream);
+    let observable2: Observable<number> = Observable.from(this._intStream2);
+
+    let observer$ = Observable.concat(observable1,observable2).subscribe(
+      (val) => { console.log(val); this.observerOutput = this.observerOutput + "\n" + val.toString() }
+    )
+  }
+
+  createObservableWithMerge() {
+    let observable1: Observable<number> = Observable.from(this._intStream);
+    let observable2: Observable<number> = Observable.from(this._intStream2);
+
+    let observer$ = Observable.concat(observable1,observable2).subscribe(
+      (val) => { console.log(val); this.observerOutput = this.observerOutput + "\n" + val.toString() }
+    )
+  }
+
+ /* createObservableWithMerge() {
+    let observable1: Observable<number> = Observable.from(this._intStream);
+    let observable2: Observable<number> = Observable.from(this._intStream2);
+
+    let observer$ = observable1.merge(observable2).subscribe(
+      (val) => { console.log(val);
+                  this.observerOutput = this.observerOutput + "\n" + val.toString()
+              }
+    )
+  }*/
 
   clearText() {
     this.observerOutput = "";
