@@ -107,16 +107,24 @@ export class MyObservableComponent {
     )
   }
 
- /* createObservableWithMerge() {
-    let observable1: Observable<number> = Observable.from(this._intStream);
-    let observable2: Observable<number> = Observable.from(this._intStream2);
+  createObservableWithConcat2() {
+    let observable1: Observable<String> = Observable.interval(1000).map(v => 'obc1:' + v);
+    let observable2: Observable<String> = Observable.interval(1000).map(v => 'obc2' + v);
 
-    let observer$ = observable1.merge(observable2).subscribe(
-      (val) => { console.log(val);
-                  this.observerOutput = this.observerOutput + "\n" + val.toString()
-              }
+    let observer$ = Observable.concat(observable1,observable2).subscribe(
+      (val) => { console.log(val); this.observerOutput = this.observerOutput + "\n" + val.toString() }
     )
-  }*/
+  }
+
+  createObservableWithMerge2() {
+    let observable1: Observable<String> = Observable.interval(1000).map(v => 'obm1:' + v);
+    let observable2: Observable<String> = Observable.interval(1000).map(v => 'obm2' + v);
+
+    let observer$ = Observable.concat(observable1,observable2).subscribe(
+      (val) => { console.log(val); this.observerOutput = this.observerOutput + "\n" + val.toString() }
+    )
+  }
+
 
   clearText() {
     this.observerOutput = "";
