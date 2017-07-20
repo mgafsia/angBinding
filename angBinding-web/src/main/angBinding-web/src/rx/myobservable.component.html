@@ -77,6 +77,18 @@ Concat vs Merge Create observable (1/2)
 Concat vs Merge Create observable (2/2)
 <br>
 
+<br>
+<HR size=2 align=center width="100%">
+
+<button md-button (click)="likeMe(i)">
+  <i class="material-icons md-18" [class.red-color]=true>thumb_up</i> LIKE
+</button>
+
+<button md-button (click)="unLikeMe(i)">
+  <i class="material-icons md-18" [class.blue-color]=true>thumb_down</i> UNLIKE
+</button>
+
+
 <HR size=2 align=center width="100%">
 
 <div class="wrapper" layout="row" layout-align="center center">
@@ -88,4 +100,5 @@ Concat vs Merge Create observable (2/2)
   <br>
   <button md-raised-button color="primary" (click)="clearText()">Clear</button>
 </div>
+
 
