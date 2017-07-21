@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {Observable} from "rxjs/Rx";
 import "rxjs/add/observable/from"
 import "rxjs/add/observable/interval"
@@ -9,11 +9,16 @@ import {MyObserver} from "./myobserver";
   selector: 'app-obsval',
   templateUrl: 'myobservable.component.html'
 })
-export class MyObservableComponent {
+export class MyObservableComponent implements OnInit{
   _intStream: [number] = [1, 2, 3, 4, 5];
   _intStream2: [number] = [21, 1, 23, 4, 25];
 
   observerOutput: string = "";
+
+  ngOnInit() {
+    this.intiLikeCounter();
+  }
+
   createObservableAndObserver() {
     this.observerOutput
     const observable$ = Observable.from(this._intStream);
@@ -123,6 +128,16 @@ export class MyObservableComponent {
     let observer$ = Observable.concat(observable1,observable2).subscribe(
       (val) => { console.log(val); this.observerOutput = this.observerOutput + "\n" + val.toString() }
     )
+  }
+
+  intiLikeCounter() {
+    let likeMeButton = document.getElementById('likeme');
+    let unLikeMeButton = document.getElementById('unlikeme');
+    let likeMeObservable = Observable.fromEvent(likeMeButton, 'click');
+    let unLikeMeObservable = Observable.fromEvent(unLikeMeButton, 'click');
+
+    let likeMeObserver = likeMeObservable.subscribe((clickEvent) => console.log('I like !'));
+    let unLikeMeObserver = unLikeMeObservable.subscribe((clickEvent) => console.log('I dislike :( '));
   }
 
 
