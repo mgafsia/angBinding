@@ -14,6 +14,8 @@ export class MyObservableComponent implements OnInit{
   _intStream2: [number] = [21, 1, 23, 4, 25];
 
   observerOutput: string = "";
+  likeCounter: number = 0;
+
 
   ngOnInit() {
     this.intiLikeCounter();
@@ -136,8 +138,8 @@ export class MyObservableComponent implements OnInit{
     let likeMeObservable = Observable.fromEvent(likeMeButton, 'click');
     let unLikeMeObservable = Observable.fromEvent(unLikeMeButton, 'click');
 
-    let likeMeObserver = likeMeObservable.subscribe((clickEvent) => console.log('I like !'));
-    let unLikeMeObserver = unLikeMeObservable.subscribe((clickEvent) => console.log('I dislike :( '));
+    let likeMeObserver = likeMeObservable.subscribe((clickEvent) => this.likeCounter++);
+    let unLikeMeObserver = unLikeMeObservable.subscribe((clickEvent) => this.likeCounter--);
   }
 
 
