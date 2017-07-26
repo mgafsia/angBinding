@@ -19,6 +19,7 @@ import {RouterModule} from "@angular/router";
 import {BindingComponent} from "../binding/binding.component";
 import {MyObservableComponent} from "../rx/myobservable.component";
 import {AnimationComponent} from "../animations/animation.component";
+import {AnimationModule} from "../animations/animations.module";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {AnimationComponent} from "../animations/animation.component";
     MdTabsModule,
     BindingModule,
     MyObservableModule,
+    AnimationModule,
     RouterModule.forRoot([
         { path: 'binding', component: BindingComponent},
         { path: 'rx', component: MyObservableComponent},

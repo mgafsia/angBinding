@@ -1,7 +1,7 @@
 <div>
   <md-toolbar color="primary">
     <span><md-icon>mood</md-icon></span>
-    <span>Angular 4 : Material & binding ways & Rx Observable/Observer</span>
+    <span>Angular 4 : Material - binding ways - Rx Observable/Observer - Animations</span>
     <button md-icon-button [md-menu-trigger-for]="menu">
       <md-icon>more_vert</md-icon>
     </button>
@@ -15,27 +15,30 @@
               a [routerLink]="['/rx']"
               routerLinkActive #rla="routerLinkActive"
       >Rx</button>
+    <button md-menu-item
+              a [routerLink]="['/animations']"
+              routerLinkActive #rla="routerLinkActive"
+    >Animations</button>
   </md-menu>
 
   <nav md-tab-nav-bar>
     <a md-tab-link
        [routerLink]="['/binding']"
-       routerLinkActive #rlab="routerLinkActive"
-       [active]="!rlar.isActive">
+       routerLinkActive #rlaa="routerLinkActive"
+       [active]="!(rlab.isActive || rlac.isActive)">
       Binding
     </a>
     <a md-tab-link
        [routerLink]="['/rx']"
-       routerLinkActive #rlar="routerLinkActive"
-       [active]="rlar.isActive">
+       routerLinkActive #rlab="routerLinkActive"
+       [active]="!(rlaa.isActive || rlac.isActive)">
        Rx
     </a>
     <a md-tab-link
        [routerLink]="['/animations']"
-       routerLinkActive #rlaa="routerLinkActive"
-       [active]="false"
-    >
-
+       routerLinkActive #rlac="routerLinkActive"
+       [active]="!(rlaa.isActive || rlab.isActive)">
+      Animations
     </a>
   </nav>
 

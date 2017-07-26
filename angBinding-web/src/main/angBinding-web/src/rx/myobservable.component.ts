@@ -22,14 +22,13 @@ export class MyObservableComponent implements OnInit{
   }
 
   createObservableAndObserver() {
-    this.observerOutput
     const observable$ = Observable.from(this._intStream);
     let myObserver = new MyObserver(this);
     observable$.subscribe(myObserver);
   }
 
   createObservableByFrom() {
-    this.observerOutput
+    this.observerOutput = "";
     const observable$ = Observable.from(this._intStream);
     const observor = observable$.subscribe(
       (val) => { console.log(val); this.observerOutput = this.observerOutput + "\n" + val.toString() },
@@ -138,8 +137,8 @@ export class MyObservableComponent implements OnInit{
     let likeMeObservable = Observable.fromEvent(likeMeButton, 'click');
     let unLikeMeObservable = Observable.fromEvent(unLikeMeButton, 'click');
 
-    let likeMeObserver = likeMeObservable.subscribe((clickEvent) => console.log('+1'));
-    let unLikeMeObserver = unLikeMeObservable.subscribe((clickEvent) => console.log('-1'));
+    let likeMeObserver = likeMeObservable.subscribe((clickEvent) => this.likeCounter++);
+    let unLikeMeObserver = unLikeMeObservable.subscribe((clickEvent) => this.likeCounter--);
   }
 
 
