@@ -138,8 +138,8 @@ export class MyObservableComponent implements OnInit{
     let likeMeObservable = Observable.fromEvent(likeMeButton, 'click');
     let unLikeMeObservable = Observable.fromEvent(unLikeMeButton, 'click');
 
-    let likeMeObserver = likeMeObservable.subscribe((clickEvent) => this.likeCounter++);
-    let unLikeMeObserver = unLikeMeObservable.subscribe((clickEvent) => this.likeCounter--);
+    let likeMeObserver = likeMeObservable.subscribe((clickEvent) => console.log('+1'));
+    let unLikeMeObserver = unLikeMeObservable.subscribe((clickEvent) => console.log('-1'));
   }
 
 
