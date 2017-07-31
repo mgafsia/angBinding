@@ -1,4 +1,15 @@
-<div>
-  <button md-raised-button color="primary" (click)="hideShowClick()">{{hideShowLabel}}</button>
+<!--<button md-raised-button color="primary" (click)="hideShowClick()">{{hideShowLabel}}</button>-->
+Animations methods ...
+<br>
+
+<button md-button (click)="hideShowClick()">
+  <i class="material-icons md-18" [class.blue-color]=true *ngIf=hideShow>add</i>
+  <i class="material-icons md-18" [class.blue-color]=true *ngIf=!hideShow>remove</i>
+</button>
+
+<div [@theTextDiv]="theTextDiv">
+  hide me <br>
+  or show me <br>
+  ... as you want :). <br>
 </div>
 
