@@ -5,25 +5,26 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   selector: 'mga-anim',
   templateUrl: 'animation.component.html',
   animations: [ trigger('theTextDiv', [
-                        state('open', style({ 'height' : '*'})),
+                        state('open', style({ 'height' : '100px', 'font-size' : '100px'})),
                         state('closed', style({ 'height' : '0px', 'font-size' : '0px'})),
-                        transition('closed <=> open', [animate(1000)])
+                        transition('closed => open', [animate(10)]),
+                        transition('open => closed', [animate(10)])
                         ])
               ]
 
 })
 export class AnimationComponent implements OnInit{
-  hideShow: boolean = true;
+  showDiv: boolean = false;
   theTextDiv: string;
 
   ngOnInit(){
   }
 
   hideShowClick() {
-    this.hideShow = !this.hideShow;
-    console.log(this.hideShow);
+    this.showDiv = !this.showDiv;
+    console.log(this.showDiv);
 
-    if(this.hideShow) this.theTextDiv = 'open';
-    if(this.hideShow) this.theTextDiv = 'closed';
+    if(this.showDiv) this.theTextDiv = 'open';
+    if(this.showDiv) this.theTextDiv = 'closed';
   }
 }

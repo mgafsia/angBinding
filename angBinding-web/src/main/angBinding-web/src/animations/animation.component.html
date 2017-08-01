@@ -3,8 +3,8 @@ Animations methods ...
 <br>
 
 <button md-button (click)="hideShowClick()">
-  <i class="material-icons md-18" [class.blue-color]=true *ngIf=hideShow>add</i>
-  <i class="material-icons md-18" [class.blue-color]=true *ngIf=!hideShow>remove</i>
+  <i class="material-icons md-18" [class.blue-color]=true *ngIf=showDiv>add</i>
+  <i class="material-icons md-18" [class.blue-color]=true *ngIf=!showDiv>remove</i>
 </button>
 
 <div [@theTextDiv]="theTextDiv">
