@@ -25,19 +25,19 @@
     <a md-tab-link
        [routerLink]="['/binding']"
        routerLinkActive #rlaa="routerLinkActive"
-       [active]="!(rlab.isActive || rlac.isActive)">
+       [active]="rlaa.isActive">
       Binding
     </a>
     <a md-tab-link
        [routerLink]="['/rx']"
        routerLinkActive #rlab="routerLinkActive"
-       [active]="!(rlaa.isActive || rlac.isActive)">
+       [active]="!rlaa.isActive && !rlac.isActive">
        Rx
     </a>
     <a md-tab-link
        [routerLink]="['/animations']"
        routerLinkActive #rlac="routerLinkActive"
-       [active]="!(rlaa.isActive || rlab.isActive)">
+       [active]="!rlaa.isActive && !rlab.isActive">
       Animations
     </a>
   </nav>
