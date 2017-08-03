@@ -9,7 +9,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
                         state('open', style({ 'height': '*'})),
                         state('closed', style({ 'height' : '0px', 'font-size' : '0px'})),
                         transition('closed <=> open', [
-                                  animate('500ms ease-out')
+                                  animate('2000ms  cubic-bezier(1, 0, 0, 1)')
                               ])
                         ])
               ]
