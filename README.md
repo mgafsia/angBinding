@@ -44,11 +44,11 @@ Property Binding on component property. Using :  @Input() - example  <app-comp1 
     
     b- [(ngModel)] : Data Binding 2-way with ngModel (for Input & textarea) - example : <input [(ngModel)]="prenom">
       
-      NgModel est une directive qui permet de réaliser du data-binding sur les éléments de formulaire de type Input et textarea.
+      NgModel is a directive to do a  data-binding for Input & textarea.
       
-      [(Le two-way Data Binding avec NgModel)] ==> exemple :  <input [(ngModel)]="prenom">  
+      [(the two-way Data Binding with NgModel)] ==> example :  <input [(ngModel)]="firstname">  
       
-      cela pu également s'écrire : 
+      which can be also written : 
       
       <input  [ngModel]="currentHero.firstName"
               (ngModelChange)="currentHero.firstName=$event">
